@@ -30,6 +30,7 @@ func New(replicas int, fn Hash) *Map {
 	return m
 }
 
+// 创建与 key 对应的节点，以及节点的虚拟节点
 func (m *Map) Add(keys ...string) {
 	for _, key := range keys {
 		for i := 0; i < m.replicas; i++ {
@@ -41,6 +42,7 @@ func (m *Map) Add(keys ...string) {
 	sort.Ints(m.keys)
 }
 
+// 获取 key 对应的 hash 所在的虚拟节点的实节点
 func (m *Map) Get(key string) string {
 	if len(m.keys) == 0 {
 		return ""

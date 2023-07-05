@@ -1,4 +1,4 @@
-package lru
+package geecache
 
 // a byteview holds an immutable view of bytes
 
