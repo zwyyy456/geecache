@@ -1,8 +1,8 @@
 package geecache
 
 import (
+	"cache/consistenthash"
 	"fmt"
-	"geecache/consistenthash"
 	"io/ioutil"
 	"log"
 	"net/http"
